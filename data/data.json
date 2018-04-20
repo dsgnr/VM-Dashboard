@@ -1,0 +1,245 @@
+[
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "000002-win2016",
+        "is_ipam":  "False",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "000003-win2012",
+        "is_ipam":  "False",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "000004-win2008",
+        "is_ipam":  "False",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "True",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000005-dc1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "000007-ubnt1",
+        "is_ipam":  "False",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000008-rdbroker",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000009-rdhost1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "000010-jira",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000011-file1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000012-db1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "000013-bast1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000014-veeam1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000015-db1-2012",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000016-db1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "000017-db2",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "000018-web1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "True",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "ADFS-17-1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "ADFS-WAP-17-1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "DEPLOY-17-1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "FreePBX",
+        "is_ipam":  "False",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "HomeAssistant",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "True",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "MISC-17-1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "phpIPAM2",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "vcenter.rsdoherty.cloud",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "False"
+    },
+    {
+        "is_power":  "Off",
+        "is_zabbix_live":  "False",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "VEEAM-16-1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "True",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "False",
+        "vm_name":  "Wiki",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    },
+    {
+        "is_power":  "On",
+        "is_zabbix_live":  "True",
+        "is_veeam":  "Not yet implemented",
+        "is_dns":  "True",
+        "vm_name":  "WSUS-17-1",
+        "is_ipam":  "True",
+        "is_zabbix_enabled":  "True"
+    }
+]

@@ -51,74 +51,97 @@
       </div>
     </header>
 
-    <main role="main">
+    <main role="">
 
-    <div class="container">
+    <div class="">
 <!-- ======================================================================================= -->
 <style>
-ul.vm_items { clear:both;}
-ul.vm_items li { list-style:none;float:left}
-</style><?php
-#$json = '
-#[
-#   {
-#      "data":[
-#         {
-#            "vm_name":"V-Cent001",
-#            "is_veeam":"Yes"
-#         },
-#         {
-#            "vm_name":"V-Cent002",
-#            "is_veeam":"Yes"
-#         },
-#         {
-#            "vm_name":"V-Cent003",
-#            "is_veeam":"Not Yet Implemented"
-#         }
-#      ]
-#   }
-#]
-#';
+ul.vm_items { margin-bottom:10px;}
+ul.vm_items li { list-style:none;}
+.main { width:90% !important; }
+.container { width:90% !important; max-width:100% !important;}
+</style>
+<?php
 
-$json ='
-[
-   {
-      "data":[
-         {
-            "is_power":"Off",
-            "is_zabbix_live":"False",
-            "is_veeam":"Not yet implemented",
-            "is_dns":"True",
-            "vm_name":"000010-jira",
-            "is_ipam":"True",
-            "is_zabbix_enabled":"False"
-         },
-         {
-            "is_power":"Off",
-            "is_zabbix_live":"False",
-            "is_veeam":"Not yet implemented",
-            "is_dns":"True",
-            "vm_name":"000010-jira",
-            "is_ipam":"True",
-            "is_zabbix_enabled":"False"
-         }
-      ]
-   }
-]
-';
+$url = 'data/data.json'; // path to your JSON file
+$data = file_get_contents($url); // put the contents of the file into a variable
+$arrData = json_decode($data, true);
 
-$arrData    =  json_decode($json);
-    foreach($arrData as $key=>$objData){
-        if(!empty($objData->{'data'})) {
-              foreach($objData->{'data'} as $select){
-		echo "<ul class=\"vm_items\">";
-                echo "<li>VM Name :".$select->vm_name."</li>".PHP_EOL;
-		echo "<li>Veeam :".$select->is_veeam."</li>".PHP_EOL;
-                echo "</ul>".PHP_EOL;
-              }
-        }
-    }
+#### This is for debugging purposes
+##var_dump(json_decode($json));
+#var_dump(json_decode($json, true));
+####
+
 ?>
+<?php
+/*foreach ($arrData as $key) {
+echo "<ul class=\"vm_items\">";
+echo "<li>VM Name: ".$key['vm_name']."</li>".PHP_EOL;
+echo "<li>Power: ".$key['is_power']."</li>".PHP_EOL;
+echo "<li>Windows DNS: ".$key['is_dns']."</li>".PHP_EOL;
+echo "<li>Veeam: ".$key['is_veeam']."</li>".PHP_EOL;
+echo "<li>IPAM: ".$key['is_ipam']."</li>".PHP_EOL;
+echo "<li>Zabbix Enabled :".$key['is_zabbix_enabled']."</li>".PHP_EOL;
+echo "<li>Zabbix Online :".$key['is_zabbix_live']."</li>".PHP_EOL;
+echo "</ul>";
+}*/
+?>
+
+
+<style>
+.col-sm {border: 1px solid #ececec; border-bottom:none; border-right:none;}
+.col-sm:last-child{ border-right:1px solid #ececec; }
+.row { border-bottom:none;}
+.row:last-child { border-bottom:1px solid #ececec;}
+.heading .col-sm{ background-color:#ececec; font-weight:bold;}
+</style>
+<div class="container" style="width:90%;">
+
+<div class="row heading">
+<div class="col-sm">VM Name</div>
+<div class="col-sm">Power</div>
+<div class="col-sm">Windows DNS</div>
+<div class="col-sm">Veeam</div>
+<div class="col-sm">IPAM</div>
+<div class="col-sm">Zabbix Enabled</div>
+<div class="col-sm">Zabbix Online</div>
+</div>
+    <?php foreach ($arrData as $key) {?>
+        <div class="row">
+            <div class="col-sm">
+                <?php echo $key['vm_name']; ?>
+            </div>
+            <div class="col-sm">
+                <?php //echo $key['is_power']; ?>
+<?php            $check = $key['is_power'];
+if ($check == 'Off') {
+echo '<span style="color:red;">'.$key['is_power'].'</span>';
+} else {
+echo '<span style="color:green;">'.$key['is_power'].'</span>';
+}
+?>
+
+
+</div>
+            <div class="col-sm">
+                <?php echo $key['is_dns']; ?>
+            </div>
+            <div class="col-sm">
+                <?php echo $key['is_veeam']; ?>
+            </div>
+            <div class="col-sm">
+                <?php echo $key['is_ipam']; ?>
+            </div>
+            <div class="col-sm">
+                <?php echo $key['is_zabbix_enabled']; ?>
+            </div>
+            <div class="col-sm">
+                <?php echo $key['is_zabbix_live']; ?>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
 <!-- ======================================================================================= -->
 
 

@@ -60,41 +60,19 @@ ul.vm_items { margin-bottom:10px;}
 ul.vm_items li { list-style:none;}
 .main { width:90% !important; }
 .container { width:90% !important; max-width:100% !important;}
-</style>
-<?php
-
-$url = 'data/data.json'; // path to your JSON file
-$data = file_get_contents($url); // put the contents of the file into a variable
-$arrData = json_decode($data, true);
-
-#### This is for debugging purposes
-##var_dump(json_decode($json));
-#var_dump(json_decode($json, true));
-####
-
-?>
-<?php
-/*foreach ($arrData as $key) {
-echo "<ul class=\"vm_items\">";
-echo "<li>VM Name: ".$key['vm_name']."</li>".PHP_EOL;
-echo "<li>Power: ".$key['is_power']."</li>".PHP_EOL;
-echo "<li>Windows DNS: ".$key['is_dns']."</li>".PHP_EOL;
-echo "<li>Veeam: ".$key['is_veeam']."</li>".PHP_EOL;
-echo "<li>IPAM: ".$key['is_ipam']."</li>".PHP_EOL;
-echo "<li>Zabbix Enabled :".$key['is_zabbix_enabled']."</li>".PHP_EOL;
-echo "<li>Zabbix Online :".$key['is_zabbix_live']."</li>".PHP_EOL;
-echo "</ul>";
-}*/
-?>
-
-
-<style>
 .col-sm {border: 1px solid #ececec; border-bottom:none; border-right:none;}
 .col-sm:last-child{ border-right:1px solid #ececec; }
 .row { border-bottom:none;}
 .row:last-child { border-bottom:1px solid #ececec;}
 .heading .col-sm{ background-color:#ececec; font-weight:bold;}
 </style>
+<?php
+
+$url = 'data/data.json'; // path to your JSON file
+$data = file_get_contents($url); // put the contents of the file into a variable
+$arrData = json_decode($data, true);
+?>
+
 <div class="container" style="width:90%;">
 
 <div class="row heading">
@@ -112,33 +90,55 @@ echo "</ul>";
                 <?php echo $key['vm_name']; ?>
             </div>
             <div class="col-sm">
-                <?php //echo $key['is_power']; ?>
-<?php            $check = $key['is_power'];
-if ($check == 'Off') {
-echo '<span style="color:red;">'.$key['is_power'].'</span>';
-} else {
-echo '<span style="color:green;">'.$key['is_power'].'</span>';
-}
-?>
-
-
-</div>
-            <div class="col-sm">
-                <?php echo $key['is_dns']; ?>
+                <?php $power_check = $key['is_power'];
+                if ($power_check == 'Off') {
+                    echo '<span style="color:red;">'.$power_check.'</span>';
+                } else {
+                    echo '<span style="color:green;">'.$power_check.'</span>';
+                }    
+                ?>
             </div>
+            <div class="col-sm">
+                <?php $dns_check = $key['is_dns'];
+                if ($dns_check == 'False') {
+                    echo '<span style="color:red;">'.$dns_check.'</span>';
+                } else {
+                    echo '<span style="color:green;">'.$dns_check.'</span>';
+                }
+                ?>
+	    </div>
             <div class="col-sm">
                 <?php echo $key['is_veeam']; ?>
             </div>
             <div class="col-sm">
-                <?php echo $key['is_ipam']; ?>
+                <?php $ipam_check = $key['is_ipam'];
+                if ($ipam_check == 'False') {
+                    echo '<span style="color:red;">'.$ipam_check.'</span>';
+                } else {
+                    echo '<span style="color:green;">'.$ipam_check.'</span>';
+                }
+                ?>
             </div>
             <div class="col-sm">
-                <?php echo $key['is_zabbix_enabled']; ?>
+                <?php $zabbix_enabled_check = $key['is_zabbix_enabled'];
+                if ($zabbix_enabled_check == 'False') {
+                    echo '<span style="color:red;">'.$zabbix_enabled_check.'</span>';
+                } else {
+                    echo '<span style="color:green;">'.$zabbix_enabled_check.'</span>';
+                }
+                ?>
             </div>
             <div class="col-sm">
-                <?php echo $key['is_zabbix_live']; ?>
+                <?php $zabbix_live_check = $key['is_zabbix_live'];
+                if ($zabbix_live_check == 'False') {
+                    echo '<span style="color:red;">'.$zabbix_live_check.'</span>';
+                } else {
+                    echo '<span style="color:green;">'.$zabbix_live_check.'</span>';
+                }
+                ?>
             </div>
-        </div>
+	
+	</div>
     <?php } ?>
 </div>
 
